@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siti Aminah, S.Ak. - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        burgundy: {
+                            50: '#fdf2f4',
+                            100: '#fbe5e9',
+                            600: '#9f1239',
+                            800: '#6b0d26',
+                            900: '#4a081a',
+                        },
+                        purpleTheme: {
+                            DEFAULT: '#7e22ce',
+                            hover: '#6b21a8',
+                            light: '#f3e8ff',
+                            dark: '#581c87'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-burgundy-800 selection:text-white">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 w-full bg-white/85 backdrop-blur-md border-b border-rose-100 z-50 transition-all">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="text-xl font-bold tracking-tight text-burgundy-900 group flex items-center gap-2.5">
+                <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-burgundy-800 to-purpleTheme text-white flex items-center justify-center font-extrabold text-sm shadow-md shadow-burgundy-900/10">SA</span>
+                <span>Siti Aminah<span class="text-purpleTheme">, S.Ak.</span></span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-burgundy-800 transition-colors">Tentang Saya</a>
+                <a href="#experience" class="hover:text-burgundy-800 transition-colors">Pengalaman</a>
+                <a href="#education" class="hover:text-burgundy-800 transition-colors">Pendidikan & Sertifikasi</a>
+                <a href="#skills" class="hover:text-burgundy-800 transition-colors">Keahlian</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden md:block">
+                <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-burgundy-800 to-purpleTheme hover:opacity-95 rounded-full shadow-md shadow-burgundy-900/15 hover:shadow-lg transition-all duration-200">
+                    Hubungi Saya
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-slate-700 hover:text-burgundy-800 focus:outline-none" aria-label="Toggle Navigation">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-rose-100 px-6 py-4 space-y-3 shadow-lg">
+            <a href="#about" class="block text-slate-600 hover:text-burgundy-800 py-1 font-medium">Tentang Saya</a>
+            <a href="#experience" class="block text-slate-600 hover:text-burgundy-800 py-1 font-medium">Pengalaman</a>
+            <a href="#education" class="block text-slate-600 hover:text-burgundy-800 py-1 font-medium">Pendidikan & Sertifikasi</a>
+            <a href="#skills" class="block text-slate-600 hover:text-burgundy-800 py-1 font-medium">Keahlian</a>
+            <a href="#contact" class="block w-full text-center mt-3 px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-burgundy-800 to-purpleTheme rounded-full">
+                Hubungi Saya
+            </a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-[88vh] flex items-center justify-center px-6 py-16 overflow-hidden">
+            <!-- Subtle Radial Gradient Backgrounds -->
+            <div class="absolute inset-0 -z-10 bg-[radial-gradient(#6b0d26_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.04]"></div>
+            <div class="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purpleTheme/10 rounded-full blur-3xl -z-10"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-burgundy-600/10 rounded-full blur-3xl -z-10"></div>
+
+            <div class="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="md:col-span-7 text-center md:text-left space-y-7">
+                    <!-- Tag Badge -->
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-burgundy-50 border border-burgundy-100 text-xs font-semibold text-burgundy-800">
+                        <span class="w-2 h-2 rounded-full bg-purpleTheme animate-pulse"></span>
+                        Accounting & Administration Professional
+                    </div>
+
+                    <!-- Main Heading / Hero Greeting & Tagline -->
+                    <div class="space-y-3">
+                        <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-burgundy-900 leading-none">
+                            Hi, I am <span class="text-transparent bg-clip-text bg-gradient-to-r from-burgundy-800 via-purpleTheme to-burgundy-600">Siti Aminah</span>
+                        </h1>
+                        <p class="text-lg sm:text-2xl font-bold tracking-tight text-slate-700 pt-1">
+                            A journey of <span class="text-purpleTheme">Knowledge</span>, <span class="text-burgundy-800">Care</span> & <span class="text-purpleTheme">Impact</span>.
+                        </p>
+                    </div>
+
+                    <!-- Subtitle / Short Bio -->
+                    <p class="max-w-2xl text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+                        Lulusan S1 Akuntansi (IPK 3,61) Universitas Pancasakti Tegal. Berpengalaman dalam pengelolaan administrasi kantor, perancangan formula MS Excel untuk laporan keuangan akurat, serta dedikasi pada pelayanan pelanggan yang responsif dan ramah.
+                    </p>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-2">
+                        <a href="#experience" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-burgundy-900 hover:bg-burgundy-800 rounded-full shadow-lg shadow-burgundy-900/15 transition-all duration-200">
+                            Lihat Rekam Jejak
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-slate-700 bg-white hover:bg-rose-50/50 border border-rose-200/80 rounded-full transition-all duration-200">
+                            <i data-lucide="mail" class="w-4 h-4 text-purpleTheme"></i>
+                            Kontak Langsung
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Photo Card with Graduation Photo -->
+                <div class="md:col-span-5 flex justify-center">
+                    <div class="relative group max-w-sm w-full">
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-burgundy-800 to-purpleTheme rounded-3xl blur opacity-40 group-hover:opacity-75 transition duration-500"></div>
+                        <div class="relative rounded-2xl overflow-hidden bg-white p-3 border border-rose-100 shadow-xl">
+                            <div class="overflow-hidden rounded-xl bg-slate-100">
+                                <img src="WhatsApp Image 2026-10-31 at 07.00.38.jpeg" 
+                                     alt="Foto Wisuda Siti Aminah, S.Ak." 
+                                     class="w-full h-[440px] object-cover object-top hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="pt-3 pb-1 text-center bg-white">
+                                <h2 class="font-bold text-burgundy-900 text-lg">Siti Aminah, S.Ak.</h2>
+                                <p class="text-xs text-purpleTheme font-semibold flex items-center justify-center gap-1 mt-0.5">
+                                    <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i>
+                                    S1 Akuntansi • IPK 3,61
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white border-y border-rose-100/70 px-6">
+            <div class="max-w-5xl mx-auto grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-7 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-wider text-purpleTheme">Tentang Saya</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-burgundy-900 tracking-tight">
+                        Ketelitian Akuntansi Ditunjang Kemampuan Komunikasi Efektif
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Saya adalah lulusan S1 Akuntansi dari Universitas Pancasakti Tegal dengan IPK 3,61. Memiliki pengalaman mengelola administrasi Sekretariat Daerah Kabupaten Tegal (Bagian Perekonomian & Pembangunan) serta merancang formula sistematis pada MS Excel untuk penyusunan laporan keuangan Perumda Tirta Ayu Slawi secara efisien dan akurat.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Memiliki dedikasi tinggi, kemampuan belajar cepat, serta kepemimpinan teruji melalui kepengurusan organisasi dan peran sebagai Ketua Pelaksana Seminar Public Speaking HIMASI.
+                    </p>
+
+                    <!-- Key Metrics -->
+                    <div class="grid grid-cols-3 gap-4 pt-4 border-t border-rose-100">
+                        <div class="bg-burgundy-50/50 p-3.5 rounded-xl border border-burgundy-100/60">
+                            <span class="block text-2xl font-extrabold text-burgundy-800">3.61</span>
+                            <span class="text-xs text-slate-600 font-medium">IPK (S1 Akuntansi)</span>
+                        </div>
+                        <div class="bg-purpleTheme-light/40 p-3.5 rounded-xl border border-purpleTheme/10">
+                            <span class="block text-xl font-extrabold text-purpleTheme">Brevet AB</span>
+                            <span class="text-xs text-slate-600 font-medium">Sertifikasi Pajak</span>
+                        </div>
+                        <div class="bg-burgundy-50/50 p-3.5 rounded-xl border border-burgundy-100/60">
+                            <span class="block text-2xl font-extrabold text-burgundy-800">477</span>
+                            <span class="text-xs text-slate-600 font-medium">Skor TOEFL ITP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Card Widget -->
+                <div class="md:col-span-5 bg-gradient-to-b from-slate-50 to-rose-50/30 p-8 rounded-2xl border border-rose-100 shadow-sm space-y-6">
+                    <h3 class="text-lg font-bold text-burgundy-900 border-b border-rose-200/60 pb-3 flex items-center gap-2">
+                        <i data-lucide="user-check" class="w-5 h-5 text-purpleTheme"></i> Informasi Ringkas
+                    </h3>
+                    <ul class="space-y-4 text-sm text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-burgundy-800 flex-shrink-0 mt-0.5"></i>
+                            <span><strong>Lokasi:</strong> Tegal, Jawa Tengah</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="graduation-cap" class="w-5 h-5 text-burgundy-800 flex-shrink-0 mt-0.5"></i>
+                            <span><strong>Pendidikan:</strong> S1 Akuntansi - Univ. Pancasakti Tegal</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-burgundy-800 flex-shrink-0 mt-0.5"></i>
+                            <span><strong>Email:</strong> sitiaaaminah12@gmail.com</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-burgundy-800 flex-shrink-0 mt-0.5"></i>
+                            <span><strong>Telepon/WA:</strong> +62 857-2601-6353</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 px-6 bg-slate-50">
+            <div class="max-w-5xl mx-auto space-y-12">
+                <div class="text-center space-y-3 max-w-2xl mx-auto">
+                    <span class="text-xs font-bold uppercase tracking-wider text-purpleTheme">Pengalaman Kerja & Magang</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-burgundy-900 tracking-tight">Rekam Jejak Profesional</h2>
+                    <p class="text-slate-600 text-sm">Pengalaman praktis di instansi pemerintahan, pelayanan publik, dan organisasi kemahasiswaan.</p>
+                </div>
+
+                <div class="relative border-l-2 border-rose-200/80 ml-4 md:ml-32 space-y-10">
+                    <!-- Item 1: Setda Kab Tegal -->
+                    <div class="relative pl-8 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-burgundy-800 group-hover:scale-125 transition-transform"></div>
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-burgundy-900">Magang Administrasi & Keuangan</h3>
+                                <span class="text-sm font-semibold text-purpleTheme">Sekretariat Daerah Kabupaten Tegal (Bagian Perekonomian & Pembangunan)</span>
+                            </div>
+                            <span class="inline-block px-3 py-1 bg-white border border-rose-200 rounded-full text-xs font-medium text-slate-500 mt-2 md:mt-0">
+                                Jan 2025 - Mar 2025
+                            </span>
+                        </div>
+                        <ul class="list-disc list-inside text-slate-600 text-sm space-y-1.5 leading-relaxed">
+                            <li>Mengelola korespondensi kantor dengan mencatat dan mendokumentasikan surat masuk serta surat keluar pada buku agenda secara terstruktur.</li>
+                            <li>Merancang rumus/formula MS Excel kustom untuk membantu penyusunan laporan keuangan Perumda Tirta Ayu Slawi secara efisien dan akurat.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Item 2: Customer Service / Sales -->
+                    <div class="relative pl-8 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-burgundy-800 group-hover:scale-125 transition-transform"></div>
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-burgundy-900">Staf Pelayanan Pelanggan & Penjualan</h3>
+                                <span class="text-sm font-semibold text-purpleTheme">Toko Emas</span>
+                            </div>
+                            <span class="inline-block px-3 py-1 bg-white border border-rose-200 rounded-full text-xs font-medium text-slate-500 mt-2 md:mt-0">
+                                2021 - 2022
+                            </span>
+                        </div>
+                        <ul class="list-disc list-inside text-slate-600 text-sm space-y-1.5 leading-relaxed">
+                            <li>Berpengalaman menawarkan produk, melayani kebutuhan transaksi pelanggan dengan ramah, dan mendukung pencapaian target penjualan toko.</li>
+                            <li>Mengembangkan kepemimpinan layanan serta komunikasi interpersonal yang adaptif.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Item 3: Leadership / Organization -->
+                    <div class="relative pl-8 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-burgundy-800 group-hover:scale-125 transition-transform"></div>
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-burgundy-900">Ketua Pelaksana Seminar Public Speaking & Pengurus</h3>
+                                <span class="text-sm font-semibold text-purpleTheme">HIMASI (Himpunan Mahasiswa Akuntansi)</span>
+                            </div>
+                            <span class="inline-block px-3 py-1 bg-white border border-rose-200 rounded-full text-xs font-medium text-slate-500 mt-2 md:mt-0">
+                                2022 - 2024
+                            </span>
+                        </div>
+                        <ul class="list-disc list-inside text-slate-600 text-sm space-y-1.5 leading-relaxed">
+                            <li>Sukses memimpin tim panitia dalam merencanakan acara dan mengelola kolaborasi lintas instansi bersama narasumber eksternal.</li>
+                            <li>Aktif berpartisipasi dalam program kerja HIMASI untuk mengasah kemampuan manajemen event, komunikasi, dan kerja sama tim.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications -->
+        <section id="education" class="py-20 bg-white px-6 border-b border-rose-100">
+            <div class="max-w-6xl mx-auto space-y-12">
+                <div class="text-center space-y-3">
+                    <span class="text-xs font-bold uppercase tracking-wider text-purpleTheme">Kualifikasi Akademis</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-burgundy-900 tracking-tight">Pendidikan & Sertifikasi</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Education Card -->
+                    <div class="p-8 bg-slate-50 rounded-2xl border border-rose-100 space-y-6">
+                        <div class="flex items-center gap-3 border-b border-rose-100 pb-4">
+                            <div class="w-10 h-10 rounded-xl bg-burgundy-50 flex items-center justify-center text-burgundy-800">
+                                <i data-lucide="book-open" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-burgundy-900">S1 Akuntansi</h3>
+                                <p class="text-xs text-slate-500">Universitas Pancasakti Tegal (2022 - 2026)</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center bg-white p-3 rounded-lg border border-slate-100">
+                                <span class="text-xs font-semibold text-slate-600">IPK Kelulusan</span>
+                                <span class="text-sm font-bold text-purpleTheme">3.61 / 4.00</span>
+                            </div>
+                            <div>
+                                <span class="text-xs font-semibold text-slate-700 block mb-2">Mata Kuliah Relevan Utama:</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2.5 py-1 bg-white text-xs text-slate-600 rounded border border-rose-100">Akuntansi Keuangan</span>
+                                    <span class="px-2.5 py-1 bg-white text-xs text-slate-600 rounded border border-rose-100">Akuntansi Manajemen</span>
+                                    <span class="px-2.5 py-1 bg-white text-xs text-slate-600 rounded border border-rose-100">Sistem Informasi Akuntansi</span>
+                                    <span class="px-2.5 py-1 bg-white text-xs text-slate-600 rounded border border-rose-100">Perpajakan</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications Card -->
+                    <div class="p-8 bg-slate-50 rounded-2xl border border-rose-100 space-y-6">
+                        <div class="flex items-center gap-3 border-b border-rose-100 pb-4">
+                            <div class="w-10 h-10 rounded-xl bg-purpleTheme-light flex items-center justify-center text-purpleTheme">
+                                <i data-lucide="award" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-burgundy-900">Sertifikasi & Pelatihan</h3>
+                                <p class="text-xs text-slate-500">Kualifikasi Profesional Tambahan</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="bg-white p-3.5 rounded-lg border border-slate-100 flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-purpleTheme flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="text-xs font-bold text-burgundy-900">Sertifikat Brevet Pajak AB</h4>
+                                    <p class="text-[11px] text-slate-500">Kompetensi Ketentuan Umum, PPh, & PPN</p>
+                                </div>
+                            </li>
+                            <li class="bg-white p-3.5 rounded-lg border border-slate-100 flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-purpleTheme flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="text-xs font-bold text-burgundy-900">Certificate of Achievement: Microsoft Office</h4>
+                                    <p class="text-[11px] text-slate-500">Lanjutan MS Excel, MS Word, & MS PowerPoint</p>
+                                </div>
+                            </li>
+                            <li class="bg-white p-3.5 rounded-lg border border-slate-100 flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-purpleTheme flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="text-xs font-bold text-burgundy-900">Certificate TOEFL by LKP Pancasakti Tegal</h4>
+                                    <p class="text-[11px] text-slate-500">Skor ITP: 477 (Tingkat Menengah / Intermediate)</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-slate-50 px-6">
+            <div class="max-w-5xl mx-auto space-y-12">
+                <div class="text-center space-y-3">
+                    <span class="text-xs font-bold uppercase tracking-wider text-purpleTheme">Kompetensi Utama</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-burgundy-900 tracking-tight">Keahlian & Perangkat Software</h2>
+                </div>
+
+                <div class="grid sm:grid-cols-3 gap-6">
+                    <!-- Technical / Software -->
+                    <div class="bg-white p-6 rounded-xl border border-rose-100 space-y-4 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 rounded-lg bg-burgundy-50 flex items-center justify-center text-burgundy-800 mb-2">
+                            <i data-lucide="file-spreadsheet" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-bold text-burgundy-900 text-base">Perangkat Lunak</h3>
+                        <ul class="text-xs space-y-2 text-slate-600">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purpleTheme"></span> Microsoft Excel (Formula/Rumus Laporan Keuangan)</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purpleTheme"></span> Microsoft Word (Dokumentasi/Surat)</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purpleTheme"></span> Microsoft PowerPoint (Presentasi)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Administration & Finance -->
+                    <div class="bg-white p-6 rounded-xl border border-rose-100 space-y-4 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 rounded-lg bg-purpleTheme-light flex items-center justify-center text-purpleTheme mb-2">
+                            <i data-lucide="briefcase" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-bold text-burgundy-900 text-base">Administrasi & Keuangan</h3>
+                        <ul class="text-xs space-y-2 text-slate-600">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-burgundy-800"></span> Manajemen Korespondensi & Arsip Data</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-burgundy-800"></span> Penyusunan Laporan Keuangan</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-burgundy-800"></span> Dasar Perpajakan (Brevet AB)</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-burgundy-800"></span> Manajemen Logistik Kantor</li>
+                        </ul>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="bg-white p-6 rounded-xl border border-rose-100 space-y-4 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 rounded-lg bg-burgundy-50 flex items-center justify-center text-burgundy-800 mb-2">
+                            <i data-lucide="users" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-bold text-burgundy-900 text-base">Komunikasi & Bahasa</h3>
+                        <ul class="text-xs space-y-2 text-slate-600">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purpleTheme"></span> Pelayanan Pelanggan (Customer Service)</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purpleTheme"></span> Leadership & Event Management</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purpleTheme"></span> Bahasa Indonesia (Aktif/Native)</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purpleTheme"></span> Bahasa Inggris (Menengah - TOEFL 477)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gradient-to-br from-burgundy-900 via-burgundy-800 to-purpleTheme-dark text-white px-6 relative">
+            <div class="max-w-3xl mx-auto text-center space-y-8">
+                <span class="text-xs font-bold uppercase tracking-wider text-rose-200">Kontak</span>
+                <h2 class="text-3xl sm:text-5xl font-bold tracking-tight">Mari Berkolaborasi & Mengembangkan Usaha</h2>
+                <p class="text-rose-100/80 max-w-xl mx-auto text-sm sm:text-base">
+                    Saya siap memberikan kontribusi positif di bidang Administrasi, Akuntansi, Perpajakan, maupun Pelayanan Pelanggan.
+                </p>
+
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="mailto:sitiaaaminah12@gmail.com" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 text-sm font-semibold text-burgundy-900 bg-white hover:bg-rose-50 rounded-full shadow-lg transition-all">
+                        <i data-lucide="mail" class="w-5 h-5 text-purpleTheme"></i>
+                        sitiaaaminah12@gmail.com
+                    </a>
+                    <a href="https://wa.me/6285726016353" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 text-sm font-semibold text-white bg-purpleTheme hover:bg-purpleTheme-hover rounded-full transition-all">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                        +62 857-2601-6353
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-burgundy-900 border-t border-burgundy-800 text-rose-200/60 py-8 px-6 text-xs">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Siti Aminah, S.Ak. All rights reserved.</p>
+            <p class="text-rose-200/50">Tegal, Jawa Tengah, Indonesia</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Lucide Icons Render
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
